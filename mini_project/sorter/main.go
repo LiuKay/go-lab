@@ -1,12 +1,12 @@
 package main
 
 import (
-	"algorithmns/bubblesort"
-	"algorithmns/qsort"
 	"bufio"
 	"flag"
 	"fmt"
 	"io"
+	"learn-go/mini_project/sorter/algorithmns/bubblesort"
+	"learn-go/mini_project/sorter/algorithmns/qsort"
 	"os"
 	"strconv"
 	"time"
