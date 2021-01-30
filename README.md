@@ -1,3 +1,3 @@
 # Learn GO
 
-Go language learning excises
+Go language learning exercises
