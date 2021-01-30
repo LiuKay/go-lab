@@ -20,6 +20,7 @@ func echo1() {
 	// 注意 string 的默认是是 “” 而不是 java中的 null
 	var s, sep string
 	// for 循环的写法
+	// os.Args 的第一个值是命令行参数的名字，后面才是参数
 	for i := 1; i < len(os.Args); i++ {
 		s += sep + os.Args[i]
 		sep = " "
