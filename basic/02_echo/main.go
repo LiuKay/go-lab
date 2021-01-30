@@ -7,6 +7,11 @@ import (
 	"strings"
 )
 
+/**
+Echo command line args:
+go run basic\02_echo\main.go aaa bbb ccc
+*/
+
 func main() {
 	echoCommandLineArgs()
 }

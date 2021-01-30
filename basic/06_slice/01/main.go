@@ -6,10 +6,11 @@ import (
 
 /**
   数组切片：
+	能够自动扩容的数组，len():元素的个数，cap():底层数组的大小，让添加元素超过cap()初始值之后，cap 会翻倍
 
 */
 func main() {
-	//createSliceBaseArray()
+	createSliceBaseArray()
 
 	mySlice := make([]int, 5, 10)
 	capOfSlice(mySlice)
@@ -18,21 +19,19 @@ func main() {
 
 	capOfSlice(mySlice)
 
-	testCopy()
+	var results []int
+	fmt.Println(results)
+
+	fmt.Println("---mySlice2---")
+	mySlice2 := []string{"a", "b", "c", "g", "m", "z"}
+	fmt.Println(mySlice2)
+	fmt.Println(mySlice2[2:4]) // slicing a slice
+	fmt.Println(mySlice2[2])   // index access; accessing by index
+	fmt.Println("mySlice2"[2]) // index access; accessing by index
 }
 
 func appendElement(arr []int) []int {
 	return append(arr, 1, 2, 3)
-}
-
-func testCopy() {
-	fmt.Println("Test copy:")
-	slice1 := []int{1, 2, 3}
-	slice2 := []int{4, 5, 6, 7, 8, 9}
-	fmt.Println("before copy:", slice1)
-	copy(slice1, slice2)
-	fmt.Println("After copy:", slice1)
-
 }
 
 func createSliceBaseArray() {
