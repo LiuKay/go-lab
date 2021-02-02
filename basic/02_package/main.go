@@ -1,17 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"awesomeProject/basic/02_package/inner_package"
+	"fmt"
+)
 
-// 大写开头的属性或方法将会对外暴露
-var ExportName = "kay"
+func main() {
+	inner_package.TestFunc()
 
-// 小写开头的属性或方法对外不可见
-var inName = "Liu"
+	fmt.Println(inner_package.ExportName)
 
-func TestFunc() {
-	fmt.Println("test func")
-}
+	// 编译错误,无法引用未导出的属性：cannot refer to unexported name inner_package.inName
+	//fmt.Println(inner_package.inName)
 
-func inFunc() {
-	fmt.Println("inner func")
+	//cannot refer to unexported name inner_package.inFunc
+	//inner_package.inFunc()
 }
