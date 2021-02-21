@@ -40,7 +40,7 @@ func main() {
 
 	var a1 Adder = &a
 	//integer does not implement Adder (Add method has pointer receiver)
-	//var a2 Adder = a
+	//var a2 Adder = a //Cannot use 'a' (type Integer) as type Adder Type does not implement 'Adder' as 'Add' method has a pointer receiver
 	fmt.Println(a1)
 
 }
